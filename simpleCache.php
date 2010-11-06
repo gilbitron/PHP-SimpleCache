@@ -1,5 +1,5 @@
 <?php 
-/* SimpleCache v1.1
+/* SimpleCache v1.2
  * May 2010
  * Gilbert Pellegrom
  * http://gilbertpellegrom.co.uk
@@ -34,10 +34,9 @@ class SimpleCache {
 	
 	function get_cache($label)
 	{
-		$filename = $this->cache_path . $this->safe_filename($label) .'.cache';
-		
-		if(file_exists($filename) && (filemtime($filename) + $this->cache_time >= time()))
+		if($this->is_cached($label))
 		{
+            $filename = $this->cache_path . $this->safe_filename($label) .'.cache';
 			return file_get_contents($filename);
 		}
 		

@@ -1,8 +1,9 @@
 <?php 
-/* SimpleCache v1.2
- * May 2010
- * Gilbert Pellegrom
- * http://gilbertpellegrom.co.uk
+/* 
+ * SimpleCache v1.2
+ *
+ * By Gilbert Pellegrom
+ * http://dev7studios.com
  *
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php

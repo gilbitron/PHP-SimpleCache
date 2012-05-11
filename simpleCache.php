@@ -1,6 +1,6 @@
 <?php 
 /* 
- * SimpleCache v1.2
+ * SimpleCache v1.3
  *
  * By Gilbert Pellegrom
  * http://dev7studios.com
@@ -35,8 +35,7 @@ class SimpleCache {
 	
 	function get_cache($label)
 	{
-		if($this->is_cached($label))
-		{
+		if($this->is_cached($label)){
             $filename = $this->cache_path . $this->safe_filename($label) .'.cache';
 			return file_get_contents($filename);
 		}
@@ -48,10 +47,7 @@ class SimpleCache {
 	{
 		$filename = $this->cache_path . $this->safe_filename($label) .'.cache';
 		
-		if(file_exists($filename) && (filemtime($filename) + $this->cache_time >= time()))
-		{
-			return true;
-		}
+		if(file_exists($filename) && (filemtime($filename) + $this->cache_time >= time())) return true;
 		
 		return false;
 	}
@@ -67,10 +63,8 @@ class SimpleCache {
 			curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1);
 			$content = curl_exec($ch);
 			curl_close($ch);
-			
-		return $content;
-		}
-		else {
+			return $content;
+		} else {
 			return file_get_contents($url);
 		}
 	}

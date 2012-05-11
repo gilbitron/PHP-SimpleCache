@@ -21,3 +21,5 @@ A more advanced example:
 	}
 
 	print_r($data);
+
+PHP SimpleCache was created by [Gilbert Pellegrom](http://gilbert.pellegrom.me) from [Dev7studios](http://dev7studios.com)

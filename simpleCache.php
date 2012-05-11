@@ -55,8 +55,7 @@ class SimpleCache {
 	//Helper function for retrieving data from url
 	function do_curl($url)
 	{
-		if(function_exists("curl_init"))
-		{
+		if(function_exists("curl_init")){
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 

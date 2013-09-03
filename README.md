@@ -27,3 +27,5 @@ print_r($data);
 ```
 
 PHP SimpleCache was created by [Gilbert Pellegrom](http://gilbert.pellegrom.me) from [Dev7studios](http://dev7studios.com)
+
+Want to say thanks? [Consider tipping me](https://www.gittip.com/gilbitron).

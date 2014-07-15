@@ -19,8 +19,8 @@
     "php": ">=5.3.0"
   },
   "autoload": {
-    "files" : [
-      "simpleCache.php"
-    ]
+    "psr-4": {
+      "Gilbitron\\Util\\": "src/"
+    }
   }
 }

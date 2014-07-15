@@ -1,6 +1,9 @@
 <?php
+
+namespace Gilbitron\Util;
+
 /*
- * SimpleCache v1.4.0
+ * SimpleCache v1.4.1
  *
  * By Gilbert Pellegrom
  * http://dev7studios.com
@@ -8,7 +11,6 @@
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  */
-
 class SimpleCache {
 
 	// Path to cache folder (with trailing /)
@@ -38,7 +40,7 @@ class SimpleCache {
 	public function get_cache($label)
 	{
 		if($this->is_cached($label)){
-            		$filename = $this->cache_path . $this->safe_filename($label) . $this->cache_extension;
+			$filename = $this->cache_path . $this->safe_filename($label) . $this->cache_extension;
 			return file_get_contents($filename);
 		}
 

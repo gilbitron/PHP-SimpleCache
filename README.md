@@ -4,13 +4,7 @@ The PHP SimpleCache Class is an easy way to cache 3rd party API calls.
 
 ## Install
 
-You can either download the class manually and "require":
-
-```php
-require('SimpleCache.php'); 
-```
-
-or you can install via [composer](https://getcomposer.org):
+Install via [composer](https://getcomposer.org):
 
 ```javascript
 {
@@ -20,22 +14,27 @@ or you can install via [composer](https://getcomposer.org):
 }
 ```
 
+Run `composer install` then use as normal:
+
+```php
+require 'vendor/autoload.php';
+$cache = new Gilbitron\Util\SimpleCache();
+```
+
 ## Usage
 
 A very basic usage example:
 
 ```php
-require('SimpleCache.php'); 
-$cache = new SimpleCache();
+$cache = new Gilbitron\Util\SimpleCache();
 $latest_tweet = $cache->get_data('tweet', 'http://search.twitter.com/search.atom?q=from:gilbitron&rpp=1');
 echo $latest_tweet;
 ```
-	
+
 A more advanced example:
 
 ```php
-require('SimpleCache.php'); 
-$cache = new SimpleCache();
+$cache = new Gilbitron\Util\SimpleCache();
 $cache->cache_path = 'cache/';
 $cache->cache_time = 3600;
 
